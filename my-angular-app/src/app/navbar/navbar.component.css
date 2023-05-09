@@ -1,0 +1,58 @@
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-img:hover {
+    transform: scale(1.2);
+  }
+  
+  .navbar-btn {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .navbar-brand a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out;
+    animation-name: dance;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes dance {
+    from { transform: translate(0, 0); }
+    to { transform: translate(0, -5px); }
+  }
+  .navbar {
+    animation: color-change 10s infinite;
+    border-bottom-right-radius: 360px;
+  }
+  
+  @keyframes color-change {
+    0% {
+      background-color: #1c3344;
+    }
+    50% {
+      background-color: #24262f;
+    }
+    100% {
+      background-color: #1c3344;
+    }
+  }
+  

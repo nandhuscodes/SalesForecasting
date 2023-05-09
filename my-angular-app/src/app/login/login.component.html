@@ -1,0 +1,43 @@
+<!-- Start Landing Page -->
+
+<div class="landing-page">
+  <div class="container">
+    <div class="header-area">
+      <div class="logo" src="">
+        <img src="assets/img/logo.png" style="width: 28px;height: 28px;">
+        <span class="logo" style="margin-left: 8px;"><a href="" style="text-decoration: none;">Sales <b>Forecasting</b></a></span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="assets/img/Analytics.gif">
+    </div>
+    <!-- Start Login Form -->
+<div class="login-form">
+  <form>
+    <div *ngIf="message!=''" style="color: #4f7663;font-size: 30px;">{{message}}</div>
+    <h1 style="margin-left: 80px;">User Login</h1>
+    <div class="form-group">
+      <label for="email" class="form">Email address:</label>
+      <input name="email" [(ngModel)]="person.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="color: #4f7663;">
+    </div>
+    <div class="form-group">
+      <label for="pwd" class="form">Password:</label>
+      <div class="input-group">
+        <input name="password" [(ngModel)]="person.password" type="{{passwordType}}" class="form-control" id="exampleInputPassword1" placeholder="Password" style="color: #4f7663;width: 395px;">
+        <span style="margin:18px;" (click)="togglePassword()">
+          <img src="assets/img/monk_cl.png" style="width: 25px;height: 25px;" *ngIf="passwordType === 'password'" />
+          <img src="assets/img/monk_op.png" style="width: 25px;height: 25px;" *ngIf="passwordType === 'text'" />
+        </span>
+      </div>
+    </div>
+    <button *ngIf="person.email!='' && person.password!=''" (click)="submit()" type="submit" class="btn btn-primary" style="background: #4f7663; color: #FFF">Submit</button>
+    <div class="signup-link">
+      New member? <a href="/register">Sign up</a>
+    </div>
+  </form>
+</div>
+<!-- End Login Form -->
+  </div>
+</div>
+
+<!-- End Landing Page -->

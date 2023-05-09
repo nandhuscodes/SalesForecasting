@@ -1,0 +1,53 @@
+<!-- Start Landing Page -->
+
+<div class="landing-page">
+  <div class="container">
+    <div class="header-area">
+      <div class="logo" src="">
+        <img src="assets/img/logo.png" style="width: 28px;height: 28px;">
+        <span class="logo" style="margin-left: 8px;"><a href="" style="text-decoration: none;">Sales <b>Forecasting</b></a></span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="assets/img/Charts.gif">
+    </div>
+    <!-- Start Login Form -->
+<div class="login-form">
+  <form>
+    <div *ngIf="message!=''" style="color: #4f7663;font-size: 30px;">{{message}}</div>
+    <h1 style="margin-left: 80px;">User SignUp</h1>
+    <div class="form-group">
+      <label for="fullname" class="form">Full Name:</label>
+      <input type="text" class="form-control" id="fullname" placeholder="Full Name" style="color: #4f7663;">
+    </div>
+    <div class="form-group">
+      <label for="email" class="form">Email address:</label>
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" style="color: #4f7663;">
+    </div>
+    <div class="form-group">
+      <label for="pwd" class="form">Password:</label>
+      <div class="input-group">
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" style="color: #4f7663;">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pwd" class="form">Password:</label>
+      <div class="input-group">
+        <input type="password" class="form-control" id="inputPassword4" type="{{passwordType}}" placeholder="Verify Password" style="color: #4f7663;width: 395px;">
+        <span style="margin:18px;" (click)="togglePassword()">
+          <img src="assets/img/monk_cl.png" style="width: 25px;height: 25px;" *ngIf="passwordType === 'password'" />
+          <img src="assets/img/monk_op.png" style="width: 25px;height: 25px;" *ngIf="passwordType === 'text'" />
+        </span>
+      </div>
+    </div>
+    <button (click) = "submit()" type="submit" class="btn btn-primary" style="background: #4f7663; color: #FFF">Sign In</button>
+    <div class="signup-link">
+      Already a member? <a href="/login">Sign up</a>
+    </div>
+  </form>
+</div>
+<!-- End Login Form -->
+  </div>
+</div>
+
+<!-- End Landing Page -->
